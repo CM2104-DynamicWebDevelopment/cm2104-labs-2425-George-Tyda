@@ -4,9 +4,8 @@ var currentdate = require('./mymodule');
 
 http.createServer(function (req, res) {
     res.whiteHead(200, {'Content-Type': 'text/html'});
-
- res.writeHead(200, {'Content-Type': 'text/html'});
- res.end('Hello World!');
+    res.write("The date and time are currently: " + currentdate.myDateTime());
+    res.end('Hello World!');
 
  
 }).listen(8080);
